@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "title": "Primer Item",
+        "description": "Este es el Primer item del mini-proyecto"
+    },
+    {
+        "id": 2,
+        "title": "Segundo Item",
+        "description": "Contenido adicional para el segundo item"
+    },
+    {
+        "id": 3,
+        "title": "Tercer Item",
+        "description": "Mas texto para probar el renderizado"
+    }
+]
