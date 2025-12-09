@@ -1,30 +1,15 @@
-import { useState } from "react";
-import itemsData from "../data/items.json";
 import ItemCard from "./ItemCard";
 
-function ItemList() {
-    const [items, setItems] = useState(itemsData);
-
-    const handleDelete = (idToDelete) => {
-        const filtered = items.filter((item) => item.id !== idToDelete);
-        setItems(filtered);
-    };
-
+function ItemList({ products, onDeleteProduct }) {
     return (
-        <div>
-            <h2>Lista de Items</h2>
-
-            {items.length === 0 && <p>No hay items disponibles.</p>}
-
-            {items.map((item) => {
-                return (
-                    <ItemCard
-                        key={item.id}
-                        item={item}
-                        onDelete={handleDelete}
-                    />
-                );
-            })}
+        <div className="amazon-grid">
+            {products.map((product) => (
+                <ItemCard
+                    key={product.id}
+                    product={product}
+                    onDeleteProduct={onDeleteProduct}
+                />
+            ))}
         </div>
     );
 }
